@@ -1,4 +1,7 @@
 node_modules/
+dist/
 .idea/
 .idea*
 .vscode*
+.env
+*.js.map

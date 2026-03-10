@@ -1,27 +1,37 @@
 {
-  "name": "test",
+  "name": "url-title-fetcher",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "dependencies": {
-    "async": "^2.6.0",
-    "axios": "^0.18.0",
-    "cheerio": "^1.0.0-rc.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "ejs": "~2.5.7",
-    "express": "~4.16.0",
-    "http": "^0.0.0",
-    "http-errors": "~1.6.2",
-    "https": "^1.0.0",
-    "morgan": "~1.9.0",
-    "q": "^1.5.1"
-  },
-  "devDependencies": {},
+  "description": "A web service that fetches and displays HTML page titles from provided URLs",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/server.ts",
+    "clean": "rm -rf dist"
   },
-  "keywords": [],
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "cookie-parser": "^1.4.7",
+    "debug": "^4.4.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.8",
+    "@types/debug": "^4.1.12",
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^5.0.0",
+    "@types/http-errors": "^2.0.4",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.10.7",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "keywords": ["web-scraper", "title-fetcher", "express", "typescript"],
   "author": "",
   "license": "ISC"
 }
